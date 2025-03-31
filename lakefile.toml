@@ -4,8 +4,8 @@ keywords = ["math"]
 defaultTargets = ["CSE290Q"]
 
 [leanOptions]
-pp.unicode.fun = true # pretty-prints `fun a ↦ b`
-autoImplicit = false
+pp.unicode.fun = false # pretty-prints `fun a ↦ b`
+autoImplicit = true
 
 [[require]]
 name = "mathlib"

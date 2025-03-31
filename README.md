@@ -8,3 +8,5 @@ How to get started:
 3. In VS Code, open the `cse-290q-25sp` folder.
 
 You may consider installing the [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) VS Code extension. I don't usually use it, but I enable it when doing live coding.
+
+VS Code tip: on the "Lean Infoview" panel, click the "..." and select "Lock Group". This prevents this panel from being used when files are opened.
