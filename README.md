@@ -21,3 +21,4 @@ VS Code tip: on the "Lean Infoview" panel, click the "..." and select "Lock Grou
 * Mathematics in Lean https://leanprover-community.github.io/mathematics_in_lean/
 * Metaprogramming in Lean https://github.com/arthurpaulino/lean4-metaprogramming-book
 * Homotopy Type Theory https://homotopytypetheory.org/book/
+* Type Checking in Lean 4 https://ammkrn.github.io/type_checking_in_lean4/
