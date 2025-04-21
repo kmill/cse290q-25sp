@@ -280,3 +280,23 @@ theorem Vec.countP_map (p : β → Bool) :
 theorem Vec.count_map [DecidableEq β] {b : β} :
     (xs.map f).count b = xs.countP (f · = b) := by
   sorry
+
+def Vec.filterP (p : α → Bool) {m : Nat} (xs : Vec α m) : Vec α (Vec.countP p xs) :=
+  match xs with
+  | [] => []
+  | x :: xs' =>
+    if h : p x then
+      (x :: xs'.filterP p).cast sorry
+    else
+      (xs'.filterP p).cast sorry
+
+variable {p : α → Bool}
+
+theorem Vec.countP_append :
+    Vec.countP p (xs +++ ys) = Vec.countP p xs + Vec.countP p ys := by
+  sorry
+
+theorem Vec.filterP_append :
+    Vec.filterP p (xs +++ ys)
+      = (Vec.filterP p xs +++ Vec.filterP p ys).cast (by rw [Vec.countP_append, Nat.add_comm]) := by
+  sorry
