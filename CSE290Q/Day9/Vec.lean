@@ -300,3 +300,28 @@ theorem Vec.filterP_append :
     Vec.filterP p (xs +++ ys)
       = (Vec.filterP p xs +++ Vec.filterP p ys).cast (by rw [Vec.countP_append, Nat.add_comm]) := by
   sorry
+
+theorem Vec.filterP_map {p : β → Bool} {f : α → β} :
+    Vec.filterP p (Vec.map f xs) = (Vec.map f (Vec.filterP (p ∘ f) xs)).cast sorry := by
+  sorry
+
+-- Isn't this `h` hypothesis a little odd?
+theorem Vec.filterP_eq_self_iff_countP_eq {h : m = xs.countP p} :
+    Vec.filterP p xs = xs.cast h ↔ xs.countP p = m := by
+  sorry
+
+-- A way to state the reverse:
+theorem Vec.countP_eq_length_iff_filterP_eq_self :
+    xs.countP p = m ↔ ∃ (h : m = xs.countP p), Vec.filterP p xs = xs.cast h := by
+  sorry
+
+theorem Vec.countP_eq_zero_iff :
+    xs.countP p = 0 ↔ ∃ (h : 0 = xs.countP p), Vec.filterP p xs = [].cast h := by
+  sorry
+
+theorem Vec.countP_pos_iff_exists :
+    0 < Vec.countP p xs
+      ↔ ∃ (n n' : Nat) (as : Vec α n) (b : α) (cs : Vec α n') (h : n' + 1 + n = m),
+          p b ∧ Vec.countP p as = 0 ∧
+          xs = (as +++ (b :: cs)).cast h := by
+  sorry
