@@ -130,7 +130,7 @@ theorem Vec.reverseAux_nil :
     Vec.reverseAux [] ys = ys :=
   rfl
 
-theorem Vec.reveresAux_cons {x : α} :
+theorem Vec.reverseAux_cons {x : α} :
     Vec.reverseAux (x :: xs) ys = (reverseAux xs (x :: ys)).cast (by sorry) :=
   rfl
 
